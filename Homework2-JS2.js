@@ -1,6 +1,7 @@
 const searchingName = (keyword, limit, destinatedFunction) => {
-    // Searching nama
-    // Check pembatasan output
+    if(typeof destinatedFunction !== 'function'){
+        return 'Invalid Function';
+    }
     const listNama = [
         'Abigail', 'Alexandra', 'Alison',
         'Amanda', 'Angela', 'Bella',
@@ -17,6 +18,7 @@ const searchingName = (keyword, limit, destinatedFunction) => {
 }
 
 const checkName = (result, key, lengthOfOutput, element) => {
+    // Searching nama dan check pembatasan output
     if (element.search(key) == -1) {
         return;
     } {
@@ -30,4 +32,4 @@ const checkName = (result, key, lengthOfOutput, element) => {
     }
 }
 
-console.log(searchingName("el", 3, checkName));
+console.log(searchingName('an', 3, checkName));
